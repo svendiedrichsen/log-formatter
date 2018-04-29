@@ -1,6 +1,7 @@
 package logging.util.json;
 
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 
 import java.util.logging.Formatter;
 import java.util.logging.LogRecord;
@@ -15,7 +16,9 @@ import java.util.logging.LogRecord;
 public class GsonFormatter extends Formatter {
 
     public String format(LogRecord record) {
-        return new Gson().toJson(record);
+        GsonBuilder gson = new GsonBuilder();
+        gson.registerTypeAdapter(LogRecord.class, new LogRecordSerializer());
+        return gson.create().toJson(record);
     }
 
 }
