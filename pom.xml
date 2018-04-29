@@ -4,7 +4,7 @@
 
     <groupId>com.github.svendiedrichsen</groupId>
     <artifactId>log-formatter</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.0</version>
     <packaging>pom</packaging>
     <description>Parent for JUL JSON formatter modules</description>
     <inceptionYear>2018</inceptionYear>
@@ -101,7 +101,7 @@
         <connection>scm:git:git://github.com/svendiedrichsen/log-formatter.git</connection>
         <developerConnection>scm:git:git@github.com:svendiedrichsen/log-formatter.git</developerConnection>
         <url>https://github.com/svendiedrichsen/log-formatter.git</url>
-        <tag>HEAD</tag>
+        <tag>log-formatter-1.0.0</tag>
     </scm>
 
     <profiles>
