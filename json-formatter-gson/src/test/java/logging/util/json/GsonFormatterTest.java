@@ -26,7 +26,9 @@ public class GsonFormatterTest {
 
     @Test
     public void testSimpleLogging() {
-        LOG.info("Some message");
+        LOG.info("Info message");
+        LOG.warning("Warning message");
+        LOG.severe("Severe message");
     }
 
     @Test

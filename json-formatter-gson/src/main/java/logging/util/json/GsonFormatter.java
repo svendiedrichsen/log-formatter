@@ -17,7 +17,7 @@ public class GsonFormatter extends Formatter {
     public String format(LogRecord record) {
         GsonBuilder gson = new GsonBuilder();
         gson.registerTypeAdapter(LogRecord.class, new LogRecordSerializer());
-        return gson.create().toJson(record);
+        return gson.create().toJson(record) + "\n";
     }
 
 }

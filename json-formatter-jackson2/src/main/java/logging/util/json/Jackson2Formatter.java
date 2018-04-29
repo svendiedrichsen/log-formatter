@@ -24,7 +24,7 @@ public class Jackson2Formatter extends Formatter {
             SimpleModule module = new SimpleModule();
             module.addSerializer(new LogRecordSerializer());
             objectMapper.registerModule(module);
-            return objectMapper.writeValueAsString(record);
+            return objectMapper.writeValueAsString(record) + "\n";
         } catch (JsonProcessingException e) {
             System.err.println("Cannot format LogRecord: " + e.getMessage());
         }

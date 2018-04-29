@@ -20,7 +20,9 @@ public class Jackson2FormatterTest {
 
     @Test
     public void testLogging() {
-        LOG.info("Some message");
+        LOG.info("Info message");
+        LOG.warning("Warning message");
+        LOG.severe("Severe message");
     }
 
     @Test
