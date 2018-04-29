@@ -1,6 +1,5 @@
 package logging.util.json;
 
-import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
 import java.util.logging.Formatter;
