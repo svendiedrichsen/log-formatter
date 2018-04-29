@@ -12,7 +12,7 @@ java.util.logging.FileHandler.formatter=logging.util.json.GsonFormatter
 ```
 <dependency>
     <artifactId>json-formatter-gson</artifactId>
-    <groupId>logging.util</groupId>
+    <groupId>com.github.svendiedrichsen</groupId>
     <version>1.0-SNAPSHOT</version>
 </dependency>
 ```

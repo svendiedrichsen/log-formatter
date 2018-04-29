@@ -8,11 +8,11 @@ java.util.logging.FileHandler.formatter=logging.util.json.Jackson2Formatter
 ...
 ```
 
-### Maven regular dependency
+### Maven dependency
 ```
 <dependency>
     <artifactId>json-formatter-jackson2</artifactId>
-    <groupId>logging.util</groupId>
+    <groupId>com.github.svendiedrichsen</groupId>
     <version>1.0-SNAPSHOT</version>
 </dependency>
 ```
