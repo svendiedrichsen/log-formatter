@@ -4,6 +4,9 @@ provides besides a normal JAR an Uber-Jar containing all required dependencies.
 
 To use one of them you can set the formatter at the specific JUL `Handler` implementation. 
 
+Each formatter adds a `timestamp` property to each log entry derived from the `LogRecord`s
+`millis` property. It uses the RFC-3339 format `yyyy-MM-dd'T'HH:mm:ss.SSSZ`.
+
 ### [JSON formatter using GSON](./json-formatter-gson/README.md)
 Formatter using [GSON](https://github.com/google/gson) to create JSON.
   
