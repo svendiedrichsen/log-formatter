@@ -16,13 +16,4 @@ java.util.logging.FileHandler.formatter=logging.util.json.Jackson2Formatter
     <version>1.0-SNAPSHOT</version>
 </dependency>
 ```
-
-### Maven uber dependency
-```
-<dependency>
-    <artifactId>json-formatter-jackson2</artifactId>
-    <groupId>logging.util</groupId>
-    <version>1.0-SNAPSHOT</version>
-    <classifier>uber</classifier>
-</dependency>
-```
+To use the uber dependency add the maven `<classifier>uber</classifier>`.

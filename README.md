@@ -1,5 +1,5 @@
 ## Log formatter
-This project contains `Formatter` implementations usable with JUL logging. Each library
+This project contains `java.util.logging.Formatter` implementations usable with JUL logging. Each library
 provides besides a normal JAR an Uber-Jar containing all required dependencies.
 
 To use one of them you can set the formatter at the specific JUL `Handler` implementation. 
