@@ -13,7 +13,7 @@ java.util.logging.FileHandler.formatter=logging.util.json.GsonFormatter
 <dependency>
     <artifactId>json-formatter-gson</artifactId>
     <groupId>com.github.svendiedrichsen</groupId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0.1</version>
 </dependency>
 ```
 To use the uber dependency add the maven `<classifier>uber</classifier>`.
