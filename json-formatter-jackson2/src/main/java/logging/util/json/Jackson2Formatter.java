@@ -18,17 +18,21 @@ import java.util.logging.Logger;
  */
 public class Jackson2Formatter extends Formatter {
 
+    private static ObjectMapper objectMapper;
+
+    static {
+        SimpleModule module = new SimpleModule();
+        module.addSerializer(new LogRecordSerializer());
+        objectMapper = new ObjectMapper()
+                .registerModule(module);
+    }
+
     public String format(LogRecord record) {
         try {
-            ObjectMapper objectMapper = new ObjectMapper();
-            SimpleModule module = new SimpleModule();
-            module.addSerializer(new LogRecordSerializer());
-            objectMapper.registerModule(module);
-            return objectMapper.writeValueAsString(record) + "\n";
+            return objectMapper.writer().writeValueAsString(record) + "\n";
         } catch (JsonProcessingException e) {
-            System.err.println("Cannot format LogRecord: " + e.getMessage());
+            throw new IllegalStateException("Cannot format LogRecord.", e);
         }
-        return "";
     }
 
 }

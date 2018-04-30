@@ -14,10 +14,15 @@ import java.util.logging.LogRecord;
  */
 public class GsonFormatter extends Formatter {
 
+    private static GsonBuilder builder;
+
+    static {
+        builder = new GsonBuilder();
+        builder.registerTypeAdapter(LogRecord.class, new LogRecordSerializer());
+    }
+
     public String format(LogRecord record) {
-        GsonBuilder gson = new GsonBuilder();
-        gson.registerTypeAdapter(LogRecord.class, new LogRecordSerializer());
-        return gson.create().toJson(record) + "\n";
+        return builder.create().toJson(record) + "\n";
     }
 
 }
