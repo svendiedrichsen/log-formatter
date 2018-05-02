@@ -31,6 +31,9 @@ public class LogRecordSerializer implements JsonSerializer<LogRecord> {
         record.addProperty("level", logRecord.getLevel().getName());
         record.addProperty("sequenceNumber", logRecord.getSequenceNumber());
         record.addProperty("threadID", logRecord.getThreadID());
+        record.addProperty("loggerName", logRecord.getLoggerName());
+        record.addProperty("sourceClassName", logRecord.getSourceClassName());
+        record.addProperty("sourceMethodName", logRecord.getSourceMethodName());
         record.addProperty("message", logRecord.getMessage());
 
         if ( logRecord.getThrown() != null) {

@@ -34,6 +34,9 @@ public class LogRecordSerializer extends StdSerializer<LogRecord> {
         jsonGenerator.writeStringField("level", logRecord.getLevel().getName());
         jsonGenerator.writeNumberField("sequenceNumber", logRecord.getSequenceNumber());
         jsonGenerator.writeNumberField("threadID", logRecord.getThreadID());
+        jsonGenerator.writeStringField("loggerName", logRecord.getLoggerName());
+        jsonGenerator.writeStringField("sourceClassName", logRecord.getSourceClassName());
+        jsonGenerator.writeStringField("sourceMethodName", logRecord.getSourceMethodName());
         jsonGenerator.writeStringField("message", logRecord.getMessage());
 
         if ( logRecord.getThrown() != null) {
